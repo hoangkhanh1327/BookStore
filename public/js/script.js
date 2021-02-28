@@ -190,7 +190,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\php\BookStore\resources\js\script.js */"./resources/js/script.js");
+module.exports = __webpack_require__(/*! /home/charitysmile1309/Projects/PHP/BookStore/resources/js/script.js */"./resources/js/script.js");
 
 
 /***/ })

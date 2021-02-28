@@ -15,5 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/script.js', 'public/js')
     .js('resources/js/back-end/vendor.js', 'public/js')
     .js('resources/js/back-end/bundle.js', 'public/js')
-    .postCss('resources/css/styles.css', 'public/css')
-    .postCss('resources/css/admin.css', 'public/css')
+    .postCss('resources/css/app.css', 'public/css', [
+        require('tailwindcss')
+    ]);

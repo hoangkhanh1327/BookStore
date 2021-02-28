@@ -30,9 +30,8 @@ Route::get('/theo-doi-don-hang', [HomeController::class, 'follow_order'])->name(
 Route::get('/xem-thong-tin-tai-khoan', [UserController::class, 'index'])->name('get_info')->middleware('auth');
 Route::get('cap-nhat-thong-tin', [UserController::class, 'update'])->name('update_info')->middleware('auth');
 
-
 Route::get('/cart/index', [CartController::class, 'index'])->name('cart_index');
-Route::post('/cart/add', [CartController::class, 'add'])->name('add_cart');
+Route::post('/cart/add', [CartController::class, 'add'])->name('add_cart')->middleware('auth');
 Route::post('/cart/updateCart', [CartController::class, 'updateCart'])->name('cart.updateCart');
 Route::resource('cart', CartController::class);
 
@@ -44,7 +43,3 @@ Route::get('xem-danh-sach-tac-gia', [AdminController::class, 'get_authors'])->na
 Route::get('xem-danh-sach-sach', [AdminController::class, 'get_books'])->name('book_list');
 Route::get('xem-danh-sach-don-hang', [AdminController::class, 'get_orders'])->name('order_list');
 Auth::routes();
-
-
-
-

@@ -42,18 +42,18 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password, 'status' => 1]))
-        {
+        $this->validateLogin($request);
+
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'status' => 1])) {
             $user = Auth::user();
 
-            if($user->level == 0)
-            {
+            if ($user->level == 0) {
                 return redirect()->route('home');
-            }
-            else
-            {
+            } else {
                 return redirect()->route('dashboard');
             }
+        } else {
+            return redirect()->back()->withErrors(['The user or password does not match!']);
         }
     }
 }

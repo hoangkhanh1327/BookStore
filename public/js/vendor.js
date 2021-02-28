@@ -104,7 +104,7 @@ function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&t
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\php\BookStore\resources\js\back-end\vendor.js */"./resources/js/back-end/vendor.js");
+module.exports = __webpack_require__(/*! /home/charitysmile1309/Projects/PHP/BookStore/resources/js/back-end/vendor.js */"./resources/js/back-end/vendor.js");
 
 
 /***/ })

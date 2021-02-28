@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Book extends Model
 {
     use HasFactory;
+
     protected $guarded = [];
 
     public function category()
@@ -44,9 +45,9 @@ class Book extends Model
                 ->get(['books.*', 'author_name']);
     }
 
-
     // Get books by parent category_id
-    public static function getBooksByCategory($categoryId = 0, $number = 999){
+    public static function getBooksByCategory($categoryId = 0, $number = 999)
+    {
         return DB::table('books')
                 ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
                 ->leftJoin('authors', 'books.author_id', '=', 'authors.id')
@@ -65,13 +66,11 @@ class Book extends Model
     // Get books which is published recently
     public static function getNewestBooks()
     {
-
     }
 
     // Get books which is bought most
     public static function getHotBooks()
     {
-
     }
 
     public static function getBookByKey($search)
@@ -100,5 +99,5 @@ class Book extends Model
                                     a.id,
                                     b.saleoff
                         ");
-    } 
+    }
 }
