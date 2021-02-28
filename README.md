@@ -10,6 +10,9 @@ Tài khoản user
 Khanh@gmail.com
 Khanh123
 
+Dữ liệu DB:
+CSDL -> db_bookstore.sql
+
 Set up database
 Trong file .env chỉnh sửa:
 DB_DATABASE=
